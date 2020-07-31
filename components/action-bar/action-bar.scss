@@ -1,0 +1,44 @@
+@import '../../variables';
+.action-bar {
+  @include base;
+  margin-top: 0.25rem;
+}
+
+.action-button {
+  padding: 0.2rem 0.35rem;
+  border: 0;
+  outline: none;
+  margin-right:0.25rem;
+  background-color:$neutral-brightest;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    background-color: $neutral-brighter;
+  }
+  &.start {
+    background-color: $yes;
+    color:$neutral-abs-brightest;
+    &:hover {
+      background-color: $yes-faint;
+    }
+  }
+  &.stop {
+    background-color:$no;
+    &:hover {
+      background-color: $no-faint;
+    }
+  }
+  &.lap {
+    background-color: $info;
+    &:hover {
+      background-color:$info-faint;
+    }
+    &:disabled {
+      background-color: $info-bright;
+    }
+    &:disabled:hover {
+      background-color: $info-bright;
+      cursor:not-allowed;
+    }
+  }
+}

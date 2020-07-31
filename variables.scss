@@ -1,0 +1,31 @@
+$yes-faint: #1CA757;
+$yes: #5FC189;
+$yes-bright: #BAE4CC;
+
+$info-faint: #48D2D9;
+$info: #99E7E8;
+$info-bright: #D9F1F5;
+
+$no-faint: #FA3A3A;
+$no: #FB7474;
+
+$neutral-abs-faintest: #000;
+$neutral-fainter: #262626;
+$neutral-faint: #333;
+$neutral-brighter: #CCC;
+$neutral-brightest: #efefef;
+$neutral-abs-brightest: #fff;
+
+@mixin base {
+  display:flex;
+  justify-content: center;
+  padding: 0;
+  margin:0;
+  list-style:none; 
+}
+@mixin column {
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+}

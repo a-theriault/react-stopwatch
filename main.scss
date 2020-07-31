@@ -1,0 +1,45 @@
+@import './variables.scss';
+@media only screen and (min-width: 400px) {
+    html, body {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 800px) {
+    html, body {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  html, body {
+    font-size: 100px;
+  }
+}
+
+.html,body {
+  font-family: Roboto, Oxygen, Ubuntu, sans-serif;
+}
+.viewport {
+  display:grid;
+  grid-template-areas: header application;
+  grid-template-rows: 100vw 100vw;
+  @include column;
+  margin: 0.75rem 0 0;
+  width:100%;
+  grid-gap: 50px;
+}
+.header {
+  grid-area: header;
+}
+@media only screen and (max-width: 800px) {
+  .application {
+    flex-wrap:wrap;
+  }
+  .application > * {
+    width:100%;
+  }
+}
+.application {
+  grid-area: application;
+  display:flex;
+  justify-content: space-between;
+}
